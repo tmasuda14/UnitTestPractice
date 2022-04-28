@@ -32,6 +32,9 @@ void Practice::sortDescending(int & first, int & second, int & third)
 // character in the string, but disregarding case ('x' is the same as 'X')
 bool Practice::isPalindrome(string input)
 {
+  if(input.size() == 0){
+    return false;
+  }
   for(unsigned int i=0; i < input.size(); i++)
   {
     if( input[i] < 'A' || input[i] > 'Z' )
@@ -53,6 +56,9 @@ bool Practice::isPalindrome(string input)
 // function is case sensative so 'Z' is different than 'z'.
 int Practice::count_starting_repeats(string word)
 {
+    if(word.size() == 0){
+      return 0;
+    }
     int repetition = 1;
     int index = 0;
     
